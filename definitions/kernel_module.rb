@@ -15,6 +15,6 @@ define :kernel_module do
   end
 
   if rebuild_kernel
-    execute "make -C /usr/src/linux olddefconfig && genkernel bzImage # after #{params[:name]}=m"
+    execute "make -C /usr/src/linux olddefconfig && genkernel kernel # after #{params[:name]}=m"
   end
 end
